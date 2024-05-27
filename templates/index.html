@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Products</title>
+</head>
+<body>
+    <h1>Products Manufactured by Both BORK and PHILIPS</h1>
+    <form method="post" action="/get_common_products">
+        <button type="submit">Get Common Products</button>
+    </form>
+    {% if common_products %}
+        <ul>
+            {% for product in common_products %}
+                <li>{{ product }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
